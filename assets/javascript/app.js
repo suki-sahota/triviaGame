@@ -1,3 +1,7 @@
+/*
+ * Author: Suki Sahota
+ * Description: Trivia Game
+ */
 $(document).ready(function() {
     // GLOBAL VARIABLES
     // ============================
@@ -106,7 +110,6 @@ $(document).ready(function() {
     // Timer decrement function for screen when showing grade screen
     function decrementGradeScreen() {
         timer--;
-        //$(".time").html("<h1>" + timer + "</h1>");
         if (timer === 0) {
             clearInterval(intervalId);
             // Transition to question screen
@@ -127,7 +130,7 @@ $(document).ready(function() {
     }
     
 
-    // MAIN APPLICATION
+    // MAIN PROCESS
     // ============================
     $(document).on("click", ".choice", function() {
         if (parseInt($(this).attr("data-value")) === answerKey[index]) {
